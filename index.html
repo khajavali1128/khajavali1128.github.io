@@ -1,31 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Khaja's Website</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <link href="style.css" rel="stylesheet">
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khaja Valli Pathan - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #333;
+        }
+
+        header {
+            background-color: #005f73;
+            color: #fff;
+            padding: 1.5em 1em;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 1em;
+            padding: 0.5em 0;
+            background-color: #0a9396;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 2em;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .skills, .experience, .education {
+            margin-bottom: 2em;
+        }
+
+        h2 {
+            color: #005f73;
+            border-bottom: 2px solid #0a9396;
+            padding-bottom: 0.3em;
+        }
+
+        .skill-list, .experience-item, .education-item {
+            margin-top: 1em;
+            padding-left: 1em;
+        }
+
+        footer {
+            background-color: #0a9396;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            margin-top: 2em;
+        }
+
+        .contact {
+            margin: 1em 0;
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
     <header>
-      <h1>Welcome to Khaja's GitHub Page</h1>
+        <h1>Khaja Valli Pathan</h1>
+        <p>Software Developer | Graduate Student | Technology Enthusiast</p>
     </header>
-    <main>
-      <div style="text-align: center;" class="alert alert-primary" role="alert">
-        This site is under construction!
-      </div>
-      <div class="container text-center">
-        <div class="row">
-          <div class="col-6 col-sm-3">Project 1</div>
-          <div class="col-6 col-sm-3">Project 2</div>
-          <div class="col-6 col-sm-3">Project 3</div>
-          <div class="col-6 col-sm-3">Project 4</div>
-          <div class="w-100"></div> 
+
+    <nav>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul class="skill-list">
+            <li>Programming Languages: HTML, CSS, JavaScript, Java, Python, SQL</li>
+            <li>Frameworks & Libraries: Spring, Flask, React, Django</li>
+            <li>Databases: MySQL, PostgreSQL, MongoDB</li>
+            <li>Tools: Docker, Kubernetes, Tableau, GitHub</li>
+        </ul>
+    </section>
+
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="experience-item">
+            <h3>Graduate Research Assistant, AFRL Research Lab</h3>
+            <p>Built scalable data pipelines and applied ML models to extract insights from scholarly articles.</p>
         </div>
-      </div>
-    </main>
+        <div class="experience-item">
+            <h3>Graduate Research Intern, Griffiss Institute</h3>
+            <p>Enhanced 5G security using Blockchain, managed VNFs with OpenStack, and developed analytical dashboards.</p>
+        </div>
+        <div class="experience-item">
+            <h3>Systems Engineer, Infosys</h3>
+            <p>Developed Java-based microservices and improved system efficiency for retail data synchronization.</p>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <div class="education-item">
+            <h3>Master of Science in Computer Science</h3>
+            <p>State University of New York Polytechnic Institute, CGPA: 3.54</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="contact">
+            <p>Email: <a href="mailto:khajavalipathan1128@gmail.com">khajavalipathan1128@gmail.com</a></p>
+            <p>Phone: +1 3156010142</p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/khaja-valli-pathan" target="_blank">LinkedIn Profile</a></p>
+            <p>GitHub: <a href="https://github.com/khajavali1128" target="_blank">GitHub Profile</a></p>
+        </div>
+    </section>
+
     <footer>
-      <p>My contact details and profile links go here (coming soon!)</p>
+        <p>&copy; 2024 Khaja Valli Pathan. All Rights Reserved.</p>
     </footer>
-  </body>
+
+    <script>
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
 </html>
