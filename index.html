@@ -3,81 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Khaja Valli Pathan - Portfolio</title>
-    <link rel="icon" href="mypic.png" type="image/png">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Khaja Valli Pathan | Portfolio</title>
+    <link rel="icon" href="icon.png" type="image/png">
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
+    <!-- Dynamic Background -->
+    <div class="dynamic-background"></div>
+    
     <header>
-        <h1>Khaja Valli Pathan</h1>
-        <p>Software Developer | Graduate Student | Technology Enthusiast</p>
+        <div class="container">
+            <h1>Khaja Valli Pathan</h1>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/khaja-valli-pathan/" target="_blank">LinkedIn</a> |
+                <a href="https://github.com/khajavali1128" target="_blank">GitHub</a>
+            </div>
+            <p>Graduate Student | Full Stack Developer | AI & ML Enthusiast</p>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <nav>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul class="skill-list">
-            <li>Programming Languages: HTML, CSS, JavaScript, Java, Python, SQL</li>
-            <li>Frameworks & Libraries: Spring, Flask, React, Django</li>
-            <li>Databases: MySQL, PostgreSQL, MongoDB</li>
-            <li>Tools: Docker, Kubernetes, Tableau, GitHub</li>
-        </ul>
+    <section id="about" class="section">
+      <div class="container">
+          <h2>About Me</h2>
+          <div class="about-content">
+              <img src="mypic.png" alt="Khaja Valli Pathan" class="about-image">
+              <p>Hello! I'm Khaja Valli Pathan, a passionate developer with a keen interest in building scalable and secure systems. With hands-on experience in full-stack development, cloud solutions, AI integration, ML model training, and data engineering, I strive to create impactful projects and collaborate effectively with diverse teams.</p>
+          </div>
+      </div>
     </section>
 
-    <section id="experience">
-        <h2>Experience</h2>
-        <div class="experience-item">
-            <h3>Graduate Research Assistant, AFRL Research Lab</h3>
-            <p>Built scalable data pipelines and applied ML models to extract insights from scholarly articles.</p>
-        </div>
-        <div class="experience-item">
-            <h3>Graduate Research Intern, Griffiss Institute</h3>
-            <p>Enhanced 5G security using Blockchain, managed VNFs with OpenStack, and developed analytical dashboards.</p>
-        </div>
-        <div class="experience-item">
-            <h3>Systems Engineer, Infosys</h3>
-            <p>Developed Java-based microservices and improved system efficiency for retail data synchronization.</p>
+    <section id="skills" class="section">
+        <div class="container">
+            <h2>Skills</h2>
+            <ul>
+                <li>Programming: HTML, CSS, JavaScript, Python, Java, C++</li>
+                <li>Frameworks & Libraries: Spring, Django, React, Flask, Express.js</li>
+                <li>Databases: MySQL, PostgreSQL, MongoDB, Neo4j</li>
+                <li>Tools: GitHub, Docker, Kubernetes, Tableau</li>
+            </ul>
         </div>
     </section>
 
-    <section id="education">
-        <h2>Education</h2>
-        <div class="education-item">
-            <h3>Master of Science in Computer Science</h3>
-            <p>State University of New York Polytechnic Institute, CGPA: 3.54</p>
+    <section id="experience" class="section">
+        <div class="container">
+            <h2>Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Graduate Research Assistant</h3>
+                    <p>AFRL Research Lab - SUNY Polytechnic Institute</p>
+                    <p>July 2024 - December 2024</p>
+                    <p>Developed data pipelines and sentiment classification models with a focus on automation and scalability.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Graduate Research Intern</h3>
+                    <p>Griffiss Institute</p>
+                    <p>May 2024 - August 2024</p>
+                    <p>Enhanced 5G security and created actionable network insights using advanced cloud solutions.</p>
+                </div>
+                <div class="timeline-item">
+                    <h3>Systems Engineer</h3>
+                    <p>Infosys</p>
+                    <p>March 2024 - December 2024</p>
+                    <p>Developed APIs and microservices, improving efficiency and reducing data synchronization delays.</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <div class="contact">
+    <section id="education" class="section">
+        <div class="container">
+            <h2>Education</h2>
+            <p>Master of Science in Computer Science - State University of New York Polytechnic Institute (2023 - 2024)</p>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="projects">
+                <div class="project">
+                    <h3>Chat App</h3>
+                    <p>Real-time messaging app using MERN stack. Deployed on Vercel.</p>
+                    <a href="https://chat-app-82m6.vercel.app/" target="_blank">View Project</a>
+                </div>
+                <div class="project">
+                    <h3>Predictive Analytics for Revenue Forecasting</h3>
+                    <p>Machine learning model achieving 99% R² score.</p>
+                    <a href="https://github.com/khajavali1128/defense-companies-prediction.git" target="_blank">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact</h2>
             <p>Email: <a href="mailto:khajavalipathan1128@gmail.com">khajavalipathan1128@gmail.com</a></p>
             <p>Phone: +1 3156010142</p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/khaja-valli-pathan" target="_blank">LinkedIn Profile</a></p>
-            <p>GitHub: <a href="https://github.com/khajavali1128" target="_blank">GitHub Profile</a></p>
+            <p><a href="https://www.linkedin.com/in/khaja-valli-pathan/" target="_blank">LinkedIn</a> | <a href="https://github.com/khajavali1128" target="_blank">GitHub</a></p>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 Khaja Valli Pathan. All Rights Reserved.</p>
+        <div class="container">
+            <p>&copy; 2024 Khaja Valli Pathan. All Rights Reserved.</p>
+        </div>
     </footer>
-
-    <script>
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
 </body>
 </html>
