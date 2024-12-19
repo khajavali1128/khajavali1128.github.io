@@ -266,12 +266,13 @@ footer {
 .audio-icon {
     margin-top: 1rem;
     display: flex;
-    align-items: center;
-    gap: 0.5rem;
+    align-items: center; /* Align text and audio vertically */
+    gap: 0.5rem; /* Add spacing between text and audio player */
 }
 
-audio {
-    width: 100%;
-    max-width: 300px; /* Adjust this size as needed */
-    border: none;
+.audio-icon p {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
 }
