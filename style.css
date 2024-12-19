@@ -263,3 +263,15 @@ footer {
     }
 }
 
+.audio-icon {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+audio {
+    width: 100%;
+    max-width: 300px; /* Adjust this size as needed */
+    border: none;
+}
