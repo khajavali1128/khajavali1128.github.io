@@ -78,4 +78,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Example: particlesJS.load('dynamic-background', 'particles-config.json', function() {
     //     console.log('Particles.js loaded!');
     // });
+
+    
 });
