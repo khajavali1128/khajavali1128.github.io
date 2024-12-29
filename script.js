@@ -53,31 +53,53 @@ document.addEventListener("DOMContentLoaded", () => {
 
     animatedElements.forEach(element => animateObserver.observe(element));
 
-    // Floating button to scroll to top
-    const toTopButton = document.createElement('button');
-    toTopButton.textContent = '⬆';
-    toTopButton.className = 'to-top-button';
-    document.body.appendChild(toTopButton);
 
-    toTopButton.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
+    // Chat Bot 
+    const chatbotIcon = document.getElementById("chatbot-icon");
+    const chatbotWindow = document.getElementById("chatbot-window");
+    const chatbotClose = document.getElementById("chatbot-close");
+    const chatbotMessages = document.getElementById("chatbot-messages");
+    const chatbotInput = document.getElementById("chatbot-input");
+    const chatbotSend = document.getElementById("chatbot-send");
+
+    // Open chatbot window
+    chatbotIcon.addEventListener("click", () => {
+        chatbotWindow.style.display = "flex";
+        chatbotIcon.style.display = "none";
     });
 
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 200) {
-            toTopButton.style.display = 'block';
-        } else {
-            toTopButton.style.display = 'none';
+    // Close chatbot window
+    chatbotClose.addEventListener("click", () => {
+        chatbotWindow.style.display = "none";
+        chatbotIcon.style.display = "flex";
+    });
+
+    // Add message to chatbot
+    const addMessage = (text, sender) => {
+        const message = document.createElement("p");
+        message.classList.add(sender === "bot" ? "bot-message" : "user-message");
+        message.textContent = text;
+        chatbotMessages.appendChild(message);
+        chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+    };
+
+    // Handle user input
+    chatbotSend.addEventListener("click", () => {
+        const userMessage = chatbotInput.value.trim();
+        if (userMessage) {
+            addMessage(userMessage, "user");
+            chatbotInput.value = "";
+
+            // Simulate bot response
+            setTimeout(() => {
+                addMessage("Thanks for your question! I wil soon be proving your information.", "bot");
+            }, 1000);
         }
     });
 
-    // Optional: Add dynamic particle effects (if using a library like particles.js)
-    // Example: particlesJS.load('dynamic-background', 'particles-config.json', function() {
-    //     console.log('Particles.js loaded!');
-    // });
-
-    
+    chatbotInput.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") {
+            chatbotSend.click();
+        }
+    });
 });
